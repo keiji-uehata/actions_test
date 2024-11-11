@@ -1,0 +1,7 @@
+...
+    steps:
+      - run: echo 'test'
+      - run: |
+        ls -al
+        cd .github/workflows/
+        ls -al
