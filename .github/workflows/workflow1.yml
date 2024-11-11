@@ -6,4 +6,4 @@ jobs:
   job_group1:
     runs-on: ubuntu-latest # runs-onとstepsはセット
     steps:
-      - run: echo 'test'
+      - run: echo ${{ secrets.TEST_SECRET }}
