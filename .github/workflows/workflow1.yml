@@ -7,7 +7,3 @@ jobs:
     runs-on: ubuntu-latest # runs-onとstepsはセット
     steps:
       - run: echo 'test'
-      - run: |
-        ls -al
-        cd .github/workflows/
-        ls -al
