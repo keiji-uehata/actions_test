@@ -1,9 +1,0 @@
----
-name: CI1
-on: push
-
-jobs:
-  job_group1:
-    runs-on: ubuntu-latest # runs-onとstepsはセット
-    steps:
-      - run: echo ${{ secrets.TEST_SECRET }}

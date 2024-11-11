@@ -1,0 +1,12 @@
+---
+name: main
+on: [push]
+
+jobs:
+  myjob:
+    runs-on: ubuntu-20.04
+    steps:
+      - run: echo "Hello Main"
+  call-workflow:
+    needs: [myjob]
+    uses: ./.github/workflows/pages.yaml
