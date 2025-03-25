@@ -4,9 +4,9 @@ on: [push]
 
 jobs:
   myjob:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
-      - run: echo "Hello Main"
-  call-workflow:
-    needs: [myjob]
-    uses: ./.github/workflows/pages.yaml
+      - name: Check gh auth status
+        run: gh auth status
+        env:
+          GH_TOKEN: ${{ secrets.GTOKEN }}
