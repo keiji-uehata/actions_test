@@ -40,7 +40,7 @@ jobs:
         run: |
           gh api --method PATCH \
             -H "Accept: application/vnd.github+json" \
-            /user/packages/container/${PACKAGE_NAME}/visibility \
+            /org/rakus-dev/packages/container/${PACKAGE_NAME}/visibility \
             -f visibility=public
         env:
           GH_TOKEN: ${{ secrets.GTOKEN }}
