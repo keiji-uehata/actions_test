@@ -36,13 +36,13 @@ jobs:
           tags: |
             ghcr.io/${{ github.repository }}:latest
 
-      - name: Make the package public
-        run: |
-          gh api --method PATCH \
-            -H "Accept: application/vnd.github+json" \
-            /org/rakus-dev/packages/container/${PACKAGE_NAME}/visibility \
-            -f visibility=public
-        env:
-          GH_TOKEN: ${{ secrets.GTOKEN }}
-          PACKAGE_NAME: actions_test
+#      - name: Make the package public
+#        run: |
+#          gh api --method PATCH \
+#            -H "Accept: application/vnd.github+json" \
+#            /org/rakus-dev/packages/container/${PACKAGE_NAME}/visibility \
+#            -f visibility=public
+#        env:
+#          GH_TOKEN: ${{ secrets.GTOKEN }}
+#          PACKAGE_NAME: actions_test
   
